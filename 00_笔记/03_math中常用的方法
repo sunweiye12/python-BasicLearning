@@ -1,0 +1,22 @@
+import math
+a = 4
+print math.sqrt(4)   # 2
+
+a = 8
+a**(1/3)       # 开3次方相当于1/3次乘方  结果是2
+
+math中其他常用的数学函数：
+
+ceil(x) 取顶≠≠
+floor(x) 取底
+fabs(x) 取绝对值
+factorial (x) 阶乘
+hypot(x,y)  sqrt(x*x+y*y)
+pow(x,y) x的y次方
+sqrt(x) 开平方
+log(x)
+log10(x)
+trunc(x)  截断取整数部分
+isnan (x)  判断是否NaN(not a number)
+degree (x) 弧度转角度
+radians(x) 角度转弧度
