@@ -35,7 +35,9 @@
       - 例如：FirstName、LastName、CamelCase
 '''
 # ----------------------------------------练习------------------------------------------------------
-# 查看python的关键字
-import keyword
-print(keyword.kwlist)
-print(keyword)
+if __name__ == '__main__':
+
+    # 查看python的关键字
+    import keyword
+    print(keyword.kwlist)
+    print(keyword)

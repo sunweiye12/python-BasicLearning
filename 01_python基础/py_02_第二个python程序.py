@@ -1,4 +1,7 @@
-# -*- coding: UTF-8 -*-
-print("helloworld")
-print("hello helloworld")
-print("你好世界!!")
+
+
+if __name__ == '__main__':
+
+    print("hello helloworld")
+    print("helloworld")
+    print("你好世界!!")
