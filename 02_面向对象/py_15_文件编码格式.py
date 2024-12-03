@@ -32,7 +32,7 @@ UTF-8 编码格式
             print(c)
 '''
 
-hello_str = u"你好世界"
+hello_str = "你好世界"
 
 print(hello_str)
 

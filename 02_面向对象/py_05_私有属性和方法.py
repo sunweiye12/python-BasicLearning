@@ -8,10 +8,11 @@
 
 定义方式
     在定义属性或方法时，在属性名或者方法名前增加两个下划线，定义的就是私有属性或方法
+    在属性名或者方法名前增加一个下划线，定义的就是不建议对外暴漏的属性或方法
 
 ****Python 中，并没有 真正意义的私有
     在给 属性、方法 命名时，实际是对名称做了一些特殊处理，使得外界无法访问到
-    处理方式：在名称前面加上 _类名 => _类名__名称
+    处理方式：在名称前面加上 _类名 => _类名.__名称 --是可以访问到私有属性的
 """
 
 
@@ -22,19 +23,22 @@ class Women:
     def __init__(self, name):
         self.name = name
         # 定义为私有属性(不要问女生的年龄)
-        self.__age = 18
+        self._age = 18
+        self.__weight = 45
 
     # 定义为私有方法
     def __secret(self):
-        print("我的年龄是 %d" % self.__age)
+        print("我的年龄是 %d" % self._age)
+
 
 if __name__ == '__main__':
+    xiao_fang = Women("小芳")
 
-    xiaofang = Women("小芳")
-
-    print(xiaofang.name)  # 公共属性可以访问
-    # print(xiaofang.__age)    # 私有属性，外部不能直接访问
-    print(xiaofang._Women__age)  # 强制访问私有属性(非常不建议使用)
+    print(xiao_fang.name)        # 公共属性可以访问
+    print(xiao_fang._age)            # 受保护的属性，外部不建议直接访问
+    # print(xiao_fang.__weight)     # 私有属性，外部不能直接访问
+    print(xiao_fang._Women__weight)     # 强制访问私有属性(非常不建议使用)
+    xiao_fang._Women__secret()          # 强制访问私有方法(非常不建议使用)
 
     # 私有方法，外部不能直接调用
     # xiaofang.__secret()

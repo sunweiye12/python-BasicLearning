@@ -145,11 +145,11 @@ if __name__ == '__main__':
 
     # 需要将一个元组变量/字典变量传递给函数对应的参数
     gl_nums = (1, 2, 3)
-    gl_xiaoming = {"name": "小明", "age": 18}
+    gl_xiao_ming = {"name": "小明", "age": 18}
 
     # 如果这样写会把 gl_nums 和 gl_xiaoming 作为元组传递给第一个元素 args  (会认为传递的是元组包含了这两个元素)
-    demo(gl_nums, gl_xiaoming)
-    demo(*gl_nums, **gl_xiaoming)  # 这样证明了gl_nums是传递给第一个元组  gl_xiaoming为了传递给第一个字典(!!!要注意!!!!)
+    demo(gl_nums, gl_xiao_ming)
+    demo(*gl_nums, **gl_xiao_ming)  # 这样证明了gl_nums是传递给第一个元组  gl_xiaoming为了传递给第一个字典(!!!要注意!!!!)
 
 
     # --------------------------------------------------------------------------------------------

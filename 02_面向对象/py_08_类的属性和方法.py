@@ -24,7 +24,7 @@
 3.类方法(**用于调用类的方法和属性**)
     类方法就是针对对象定义的方法,在类方法内部可以直接访问 类属性(不可以访问实例属性) 也可以调用其他的类方法
     语法如下:
-        @classmethod                类方法需要用修饰器 @classmethod 来标识，告诉解释器这是一个类方法
+        @classmethod              类方法需要用修饰器 @classmethod 来标识，告诉解释器这是一个类方法
         def 类方法名(cls):          类方法的第一个参数应该是 cls 相当于 self  (惯使用cls 其他名称也可以)
             pass
 
@@ -38,7 +38,7 @@
         也不需要访问类属性或者调用类方法
 
     语法如下:
-        @staticmethod           需要用 修饰器 @staticmethod 来标识，告诉解释器这是一个静态方法
+        @staticmethod          需要用 修饰器 @staticmethod 来标识，告诉解释器这是一个静态方法,静态方法不能被调用,只能被继承
         def 静态方法名():        通过 类名. 调用 静态方法
             pass
 """
@@ -78,7 +78,7 @@ class Cat(object):
 
     @classmethod
     def run(cls):
-        # 不需要访问实例属性只需要访问类属性的方法
+        # 不能访问实例属性只能访问类属性的方法
         print("%d 只猫在跑..." % cls.cat_count)
 
     def __init__(self, name):
@@ -100,7 +100,7 @@ class Dog(object):
     # 狗对象计数
     dog_count = 0
 
-    @staticmethod
+    @staticmethod   # 实际使用中很少,和对象方法差异不大
     def run():
         # 不需要访问实例属性也不需要访问类属性的方法
         print("狗在跑...")

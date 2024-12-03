@@ -44,6 +44,7 @@ def play(animal):
     """定义一个方法,调用父类方法"""
     animal.game()
 
+
 if __name__ == '__main__':
 
     # 1.创建对象
