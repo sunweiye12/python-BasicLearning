@@ -19,18 +19,20 @@
 '''
 import os
 
+desktop_dir = os.path.expanduser("~/Desktop")
+
 # 重命名文件
 # os.rename("README[复件1]", "README[复件2]")
 # 删除文件
 # os.remove("README[复件2]")
 
 # 目录列表
-print(os.listdir("C://Users//Administrator//Desktop"))
+print(os.listdir(desktop_dir))
 # 创建目录
-# os.mkdir("C://Users//Administrator//Desktop//scr//python//python基础//README[复件1]")
+# os.mkdir(os.path.join(desktop_dir, "README[复件1]"))
 # 删除目录
 # os.rmdir("README[复件1]")
-# os.rmdir("C://Users//Administrator//Desktop//scr//python//python基础//README[复件1]")
+# os.rmdir(os.path.join(desktop_dir, "README[复件1]"))
 # 获取当前目录
 print(os.getcwd())
 # 修改工作目录

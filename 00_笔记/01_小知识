@@ -34,6 +34,6 @@
 
 9.文件路径设置为 . 表示当前目录  (path)  直接写代表从当前目录开始,也支持绝对路径
     file_read = open("README[复件1]//README")  当前目录README[复件1]文件夹下的README文件
-    os.listdir("C://Users//Administrator//Desktop")  桌面文件夹
+    os.listdir(os.path.expanduser("~/Desktop"))  桌面文件夹
 
 10.在继承方法时,如果父类不是object类,则需要在__init方法中重写父类方法    ---->  super().__init__()
